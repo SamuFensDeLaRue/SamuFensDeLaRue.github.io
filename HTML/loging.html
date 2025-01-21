@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Seller/LOGIN</title>
+    <link rel="stylesheet" href="./CSS/mystyle.css">
+</head>
+
+<body id="body_log_in">
+   
+   <div id="log_in">
+    <br>
+    <h1>LOG IN</h1>
+    <form action="./index.html">
+  <label for="fname">Utente</label>
+  <input type="text" id="fname" name="fname"><br><br>
+  <label for="lname">Password</label>
+  <input type="text" id="lname" name="lname"><br><br>
+  <input type="submit" value="Submit">
+
+    </form>
+    <br>
+    <br>
+    <br>
+</div>
+<script>
+        const utente = document.getElementById("fname")  //salvo il valore in una CONST, non posso rischiare il dato dato in input dall'utente
+        const passwd = document.getElementById("lname")
+
+        let utentegiusto="Samuele"; //let dichiaro le varibili 
+        let pswgiusta="1234";
+        const registra = document.getElementById("pulsante_registra")
+
+        registra.addEventListener("click", function(e) {
+            console.log(utente);  //stampa l'html di riferimento
+            console.log(utente.value); //stampa il valore
+            console.log(typeof utente.value); //per vedere il tipo
+            
+            if(utente.value == utentegiusto){
+                alert("utente giusto");
+            }else{
+                alert("utente sbagliato");
+            }
+            //Stampare una stringa
+            //alert("Ciao " + nome.value + " " + cognome.value);
+        })
+
+        registra.addEventListener("click", function(e) {
+            console.log(passwd);  //stampa l'html di riferimento
+            console.log(passwd.value); //stampa il valore
+            console.log(typeof passwd.value); //per vedere il tipo
+            
+            if(passwd.value == pswgiusta){
+                alert("password giusta");
+            }else{
+                alert("password sbagliata");
+            }
+        })
+</script>
+</body>
+</html>
